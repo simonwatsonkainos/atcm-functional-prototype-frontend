@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="shop" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="shop" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="shop" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="atcm" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ATCM Functional Prototype</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app/assets/shop.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <script src="../bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+  <div class="container">
+ <!--    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#/shopProducts">Clothes Shop</a>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">                    
+            <li class="navbar-right"><div shopping-cart-summary></div></li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+  <div class="page-header">
+    <h1>ATCM Functional Prototype <small>v1.0</small></h1><div shopping-cart-summary></div>
+  </div>
+  
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+    <div ui-view></div>
+    <!--<div class="md-col-12 float-right">Clothes shop app: v<span app-version></span></div>-->
+  </div>
+  
+  <script src="bower_components/angular/angular.js"></script>
+  <!--<script src="bower_components/angular-route/angular-route.js"></script>-->
+  <script src="bower_components/underscore/underscore-min.js"></script> 
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>  
+  <script src="app/app.js"></script>  
+  <script src="app/atcm/atcmService.js"></script>
+  <script src="app/atcm/homeController.js"></script>
+  <script src="app/atcm/searchController.js"></script>
+  <script src="app/atcm/viewAllController.js"></script>
+  <script src="app/atcm/caseOverviewController.js"></script>
+  <script src="app/atcm/updatePleaController.js"></script>
+
+  
+  <!--<script src="app/services/shopProductsService.js"></script>    
+  <script src="app/services/uniqueIdService.js"></script>  
+  <script src="app/shopProducts/shopProductsModule.js"></script>
+  <script src="app/shopProducts/shopProductsCtrl.js"></script>
+  <script src="app/shoppingCart/shoppingCartModule.js"></script>
+  <script src="app/shoppingCart/shoppingCartCtrl.js"></script>
+  <script src="app/services/shoppingCartService.js"></script>
+  <script src="app/services/configService.js"></script>
+  <script src="app/directives/shoppingCartSummary.js"></script>
+  <script src="app/components/version/version.js"></script>
+  <script src="app/components/version/version-directive.js"></script>
+  <script src="app/components/version/interpolate-filter.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>SJP Case Search</h3>
+      <form name="searchForm" novalidate autocomplete="off">
+        <div class="form-group" data-ng-class="{'cpp-form-error': sjpSearch.submitted && searchForm.searchTerm.$error.required}">
+          <h6 class="alert-warning" data-ng-if="emptySearchTerm">Please enter a search term</h6>
+          <h6 class="alert-danger" data-ng-if="error">Something has gone wrong, please try again later</h6>
+          <div class="input-group search-group">
+            <input type="text" name="searchTerm" class="form-control" placeholder="Enter defendant name or URN" data-ng-model="searchTerm" required />
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-search" type="submit" data-ng-click="search(searchTerm)">Search</button>
+            </span>
+          </div>
+        </div>        
+        <table class="table" data-ng-show="searchResults.length > 0">
+          <thead>
+            <tr>
+              <td>Case URL</td>
+              <td>Defendant Name</td>
+              <td>DOB</td>
+              <td>Date Notice Served</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-ng-repeat="searchResult in searchResults">
+              <td><a href="atcm.html#/caseOverview/{{searchResult.id}}">{{searchResult.prosecutorId}}</a></td>
+              <td>{{searchResult.defendant.forename}} {{searchResult.defendant.familyName}}</td>
+              <td>{{searchResult.defendant.dob | date:'dd/MM/yyyy'}}</td>
+              <td>{{searchResult.offence.offenceDate | date:'dd/MM/yyyy'}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <p data-ng-show="searchResults && searchResults.length === 0">No search results found</p>
+      </form>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Update Plea</h3>
+      <p>Update plea for case: {{case.prosecutorId}}</p>
+      <label class="radio-inline"><input value="GUILTY" ng-model="plea" type="radio" name="optradio">Guilty</label>
+	  <label class="radio-inline"><input type="radio" value="NOT GUILTY" ng-model="plea" name="optradio">Not Guilty</label>
+	  <label class="radio-inline"><input type="radio" value="AWAITING PLEA" ng-model="plea" name="optradio">Awaiting Plea</label>
+	  <br />	  
+	  <button ng-disabled="!plea" ng-click="savePlea()" type="button" class="btn btn-primary">Save</button>
+    </div>
+  </div>
+</div>

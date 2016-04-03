@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>View All SJP Cases</h3>
+      <table class="table">
+          <thead>
+            <tr>
+              <td>Case URL</td>
+              <td>Defendant Name</td>
+              <td>DOB</td>
+              <td>Date Notice Served</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-ng-repeat="case in cases">
+              <td><a data-ui-sref="case-overview({ caseId: case.id })">{{case.prosecutorId}}</a></td>
+              <td>{{case.defendant.forename}} {{searchResult.defendant.familyName}}</td>
+              <td>{{case.defendant.dob | date:'dd/MM/yyyy'}}</td>
+              <td>{{case.offence.offenceDate | date:'dd/MM/yyyy'}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
